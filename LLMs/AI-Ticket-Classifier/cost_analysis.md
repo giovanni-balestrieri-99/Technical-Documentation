@@ -38,11 +38,13 @@ Key Findings:
 
 ### Cost per Ticket Across Different Volumes
 
-| Volume              | Total Cost | Cost per Ticket |
-|---------------------|------------|-----------------|
-| 10,000 tickets      | $0.44      | $0.000044       |
-| 100,000 tickets     | $4.43      | $0.000044       |
-| 1,000,000 tickets   | $44.25     | $0.000044       |
+- Cost per Ticket => $0.000044
+
+| Volume              | Total Cost |
+|---------------------|------------|
+| 10,000 tickets      | $0.44      |
+| 100,000 tickets     | $4.43      |
+| 1,000,000 tickets   | $44.25     |
 
 ### High-Level Insights
 
@@ -166,30 +168,6 @@ Per Ticket:
 ================================================================================
 
 ## 4. DETAILED CALCULATIONS FOR 10K TICKETS
-
-### Volume Metrics
-
-  - Total tickets: 10,000
-  - Batch size: 5 tickets per API call
-  - API calls needed: 10,000 ÷ 5 = 2,000 calls
-
-### Token Usage
-
---- Input Tokens ---
-
-  Input tokens per call: 675
-  Total API calls: 2,000
-  Total input tokens: 675 × 2,000 = 1,350,000 tokens
-
---- Output Tokens ---
-
-  Output tokens per call: 200
-  Total API calls: 2,000
-  Total output tokens: 200 × 2,000 = 400,000 tokens
-
---- Total Tokens ---
-
-  1,750,000 tokens
 
 ### Cost Breakdown
 
