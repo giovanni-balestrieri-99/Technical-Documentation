@@ -38,11 +38,11 @@ Key Findings:
 
 ### Cost per Ticket Across Different Volumes
 
-Volume              Total Cost      Cost per Ticket
-----------------    ------------    ----------------
-10,000 tickets      $0.44           $0.000044
-100,000 tickets     $4.43           $0.000044
-1,000,000 tickets   $44.25          $0.000044
+| Volume              | Total Cost | Cost per Ticket |
+|---------------------|------------|-----------------|
+| 10,000 tickets      | $0.44      | $0.000044       |
+| 100,000 tickets     | $4.43      | $0.000044       |
+| 1,000,000 tickets   | $44.25     | $0.000044       |
 
 ### High-Level Insights
 
@@ -152,11 +152,11 @@ Format:
 
 Per API Call (5 tickets):
 
-Component           Tokens      Cost            % of Total
-----------------    -------     ------------    -----------
-Input tokens        675         $0.0001013      45.8%
-Output tokens       200         $0.0001200      54.2%
-TOTAL               875         $0.0002213      100%
+| Component     | Tokens | Cost       | % of Total |
+|---------------|--------|------------|------------|
+| Input tokens  | 675    | $0.0001013 | 45.8%      |
+| Output tokens | 200    | $0.0001200 | 54.2%      |
+| **TOTAL**     | **875**| **$0.0002213** | **100%** |
 
 Per Ticket:
   - Input: 135 tokens (110 base + 25 variable)
@@ -211,11 +211,11 @@ Per Ticket:
 
 ### Cost Distribution
 
-Component       Tokens          Percentage      Cost        Percentage
------------     ------------    -----------     -------     -----------
-Input           1,350,000       77.1%           $0.20       45.5%
-Output          400,000         22.9%           $0.24       54.5%
-TOTAL           1,750,000       100%            $0.44       100%
+| Component | Tokens      | Percentage | Cost  | Percentage |
+|-----------|-------------|------------|-------|------------|
+| Input     | 1,350,000   | 77.1%      | $0.20 | 45.5%      |
+| Output    | 400,000     | 22.9%      | $0.24 | 54.5%      |
+| **TOTAL** | **1,750,000** | **100%** | **$0.44** | **100%** |
 
 ================================================================================
 
@@ -223,30 +223,30 @@ TOTAL           1,750,000       100%            $0.44       100%
 
 ### Complete Cost Overview
 
-Volume  API Calls   Input Tokens    Output Tokens   Input Cost  Output Cost Total Cost  Cost/Ticket
-------  ---------   -------------   -------------   ----------  ----------- ----------  -----------
-10K     2,000       1,350,000       400,000         $0.20       $0.24       $0.44       $0.000044
-100K    20,000      13,500,000      4,000,000       $2.03       $2.40       $4.43       $0.000044
-1M      200,000     135,000,000     40,000,000      $20.25      $24.00      $44.25      $0.000044
+| Volume | API Calls | Input Tokens | Output Tokens | Input Cost | Output Cost | **Total Cost** | Cost/Ticket |
+|--------|-----------|--------------|---------------|------------|-------------|----------------|-------------|
+| **10K** | 2,000 | 1,350,000 | 400,000 | $0.20 | $0.24 | **$0.44** | $0.000044 |
+| **100K** | 20,000 | 13,500,000 | 4,000,000 | $2.03 | $2.40 | **$4.43** | $0.000044 |
+| **1M** | 200,000 | 135,000,000 | 40,000,000 | $20.25 | $24.00 | **$44.25** | $0.000044 |
 
 ### Cost Distribution Across Volumes
 
-Volume              Input Cost %        Output Cost %
----------------     ---------------     ---------------
-10K tickets         45.5%               54.5%
-100K tickets        45.8%               54.2%
-1M tickets          45.8%               54.2%
+| Volume       | Input Cost % | Output Cost % |
+|--------------|--------------|---------------|
+| 10K tickets  | 45.5%        | 54.5%         |
+| 100K tickets | 45.8%        | 54.2%         |
+| 1M tickets   | 45.8%        | 54.2%         |
 
 ### Extrapolated Costs
 
-Volume              Estimated Cost
----------------     ---------------
-5K                  $0.22
-50K                 $2.20
-250K                $11.00
-500K                $22.00
-5M                  $220.00
-10M                 $440.00
+| Volume | Estimated Cost |
+|--------|----------------|
+| 5K     | $0.22          |
+| 50K    | $2.20          |
+| 250K   | $11.00         |
+| 500K   | $22.00         |
+| 5M     | $220.00        |
+| 10M    | $440.00        |
 
 ================================================================================
 
@@ -289,23 +289,23 @@ Potential Savings: 5-10%
 
 ### Detailed Batch Size Analysis
 
-Batch Size  Base Overhead/Ticket  Variable/Ticket  Total Input/Ticket  Input Tokens/Call  Savings vs 5
-----------  --------------------  ---------------  ------------------  -----------------  ------------
-5           110 tokens            25 tokens        135 tokens          675                baseline
-10          55 tokens             25 tokens        80 tokens           800                41%
-15          37 tokens             25 tokens        62 tokens           925                54%
-20          28 tokens             25 tokens        53 tokens           1,050              61%
-25          22 tokens             25 tokens        47 tokens           1,175              65%
+| Batch Size | Base Overhead/Ticket | Variable/Ticket | Total Input/Ticket | Input Tokens/Call | Savings vs 5 |
+|------------|----------------------|-----------------|--------------------|--------------------|--------------|
+| **5**      | 110 tokens           | 25 tokens       | 135 tokens         | 675                | baseline     |
+| **10**     | 55 tokens            | 25 tokens       | 80 tokens          | 800                | 41%          |
+| **15**     | 37 tokens            | 25 tokens       | 62 tokens          | 925                | 54%          |
+| **20**     | 28 tokens            | 25 tokens       | 53 tokens          | 1,050              | 61%          |
+| **25**     | 22 tokens            | 25 tokens       | 47 tokens          | 1,175              | 65%          |
 
 ### Scaling to 1M Tickets - Complete Cost Comparison
 
-Batch Size  API Calls   Total Input     Total Output    Input Cost  Output Cost Total Cost  Savings
-----------  ---------   -------------   -------------   ----------  ----------- ----------  ------------
-5           200,000     135,000,000     40,000,000      $20.25      $24.00      $44.25      -
-10          100,000     80,000,000      40,000,000      $12.00      $24.00      $36.00      $8.25 (19%)
-15          66,667      61,667,000      40,000,000      $9.25       $24.00      $33.25      $11.00 (25%)
-20          50,000      52,500,000      40,000,000      $7.88       $24.00      $31.88      $12.37 (28%)
-25          40,000      47,000,000      40,000,000      $7.05       $24.00      $31.05      $13.20 (30%)
+| Batch Size | API Calls | Total Input | Total Output | Input Cost | Output Cost | **Total Cost** | Savings |
+|------------|-----------|-------------|--------------|------------|-------------|----------------|---------|
+| **5**      | 200,000   | 135,000,000 | 40,000,000   | $20.25     | $24.00      | **$44.25**     | -       |
+| **10**     | 100,000   | 80,000,000  | 40,000,000   | $12.00     | $24.00      | **$36.00**     | $8.25 (19%) |
+| **15**     | 66,667    | 61,667,000  | 40,000,000   | $9.25      | $24.00      | **$33.25**     | $11.00 (25%) |
+| **20**     | 50,000    | 52,500,000  | 40,000,000   | $7.88      | $24.00      | **$31.88**     | $12.37 (28%) |
+| **25**     | 40,000    | 47,000,000  | 40,000,000   | $7.05      | $24.00      | **$31.05**     | $13.20 (30%) |
 
 Note: Output cost remains constant at $24.00 as the number of tickets (and 
 thus output) stays the same.
@@ -314,12 +314,12 @@ thus output) stays the same.
 
 Incremental Savings per Batch Size Increase:
 
-Change          Incremental Savings     Incremental %
------------     -------------------     --------------
-5 → 10          $8.25                   19%
-10 → 15         $2.75                   8%
-15 → 20         $1.37                   4%
-20 → 25         $0.83                   3%
+| Change    | Incremental Savings | Incremental % |
+|-----------|---------------------|---------------|
+| 5 → 10    | $8.25               | 19%           |
+| 10 → 15   | $2.75               | 8%            |
+| 15 → 20   | $1.37               | 4%            |
+| 20 → 25   | $0.83               | 3%            |
 
 Observation: The largest savings occur when moving from 5 to 10 tickets per 
 call. Beyond 15 tickets, marginal improvements diminish significantly.
@@ -328,12 +328,12 @@ call. Beyond 15 tickets, marginal improvements diminish significantly.
 
 ROI by Batch Size (1M tickets/month):
 
-Batch Size  Monthly Savings  Annual Savings  Implementation Effort
-----------  ---------------  --------------  ---------------------
-10          $8.25            $99             Low
-15          $11.00           $132            Low-Medium
-20          $12.37           $148            Medium
-25          $13.20           $158            Medium-High
+| Batch Size | Monthly Savings | Annual Savings | Implementation Effort |
+|------------|-----------------|----------------|-----------------------|
+| **10**     | $8.25           | $99            | Low                   |
+| **15**     | $11.00          | $132           | Low-Medium            |
+| **20**     | $12.37          | $148           | Medium                |
+| **25**     | $13.20          | $158           | Medium-High           |
 
 Recommendation: Batch size of 10 offers the best effort-to-savings ratio. 
 Test at 10, then consider 15 if quality remains high.
@@ -342,13 +342,13 @@ Test at 10, then consider 15 if quality remains high.
 
 Risk Assessment by Batch Size:
 
-Batch Size  Processing Time  Error Complexity  Quality Risk     Recommended?
-----------  ---------------  ----------------  ---------------  ----------------
-5           Fast             Low               Very Low         ✓ Current
-10          Fast             Low               Low              ✓ Optimal
-15          Moderate         Medium            Low-Medium       ✓ Consider
-20          Moderate         Medium            Medium           ⚠ Test thoroughly
-25+         Slower           High              Medium-High      ✗ Not recommended
+| Batch Size | Processing Time | Error Complexity | Quality Risk  | Recommended?          |
+|------------|-----------------|------------------|---------------|-----------------------|
+| 5          | Fast            | Low              | Very Low      | ✓ Current             |
+| 10         | Fast            | Low              | Low           | ✓ **Optimal**         |
+| 15         | Moderate        | Medium           | Low-Medium    | ✓ Consider            |
+| 20         | Moderate        | Medium           | Medium        | ⚠ Test thoroughly     |
+| 25+        | Slower          | High             | Medium-High   | ✗ Not recommended     |
 
 ================================================================================
 
