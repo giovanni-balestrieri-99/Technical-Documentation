@@ -321,8 +321,8 @@ Risk Assessment by Batch Size:
 
 ### Cost Formula
 
-  Total Cost = (Input Tokens × $0.15 / 1M) + (Output Tokens × $0.60 / 1M)
-  Cost per Ticket = Total Cost ÷ Number of Tickets
+  - Total Cost = (Input Tokens × $0.15) + (Output Tokens × $0.60)
+  - Cost per Ticket = Total Cost ÷ Number of Tickets
 
 ### Token Estimates
 
