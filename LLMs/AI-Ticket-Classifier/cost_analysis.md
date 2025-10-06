@@ -6,19 +6,6 @@ Version: 1.0
 
 ================================================================================
 
-TABLE OF CONTENTS
-
-1. Executive Summary
-2. Pricing Information
-3. Token Estimation
-4. Detailed Calculations for 10K Tickets
-5. Summary Table
-6. Optimization Strategies
-7. Cost Comparison: Batch Size Impact
-8. Quick Reference
-
-================================================================================
-
 ## 1. EXECUTIVE SUMMARY
 
 ### Key Findings Overview
