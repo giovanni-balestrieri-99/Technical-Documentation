@@ -154,7 +154,31 @@ Per Ticket:
 
 ================================================================================
 
-## 4. DETAILED CALCULATIONS FOR 10K TICKETS
+## 4. DETAILED CALCULATIONS FOR 10M TICKETS
+
+### Volume Metrics
+
+  - Total tickets: 10,000
+  - Batch size: 5 tickets per API call
+  - API calls needed: 10,000 ÷ 5 = 2,000 calls
+
+### Token Usage
+
+--- Input Tokens ---
+
+  Input tokens per call: 675
+  Total API calls: 2,000
+  Total input tokens: 675 × 2,000 = 1,350,000 tokens
+
+--- Output Tokens ---
+
+  Output tokens per call: 200
+  Total API calls: 2,000
+  Total output tokens: 200 × 2,000 = 400,000 tokens
+
+--- Total Tokens ---
+
+  1,750,000 tokens
 
 ### Cost Breakdown
 
@@ -173,6 +197,7 @@ Per Ticket:
 --- Cost per Ticket ---
 
   $0.44 ÷ 10,000 = $0.000044
+
 
 ### Cost Distribution
 
@@ -319,9 +344,9 @@ Risk Assessment by Batch Size:
 
 ## 8. QUICK REFERENCE
 
-### Cost Formula
+### Cost per Call Formula 
 
-  - Total Cost = (Input Tokens × $0.15) + (Output Tokens × $0.60)
+  - Total Cost = (Input Tokens × $0.15/1M) + (Output Tokens × $0.60/1M)
   - Cost per Ticket = Total Cost ÷ Number of Tickets
 
 ### Token Estimates
